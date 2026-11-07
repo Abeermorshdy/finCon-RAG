@@ -1,0 +1,42 @@
+[project]
+name = "fincon-rag"
+version = "0.1.0"
+description = "A production-grade Hierarchical Hybrid RAG application built with Python, FastAPI, and Streamlit, designed for Financial Controlling (FinCon) and regulatory compliance documentation (IFRS, ASC GAAP, and Corporate Policy manuals)."
+readme = "README.md"
+authors = [
+    { name = "Abeermorshdy", email = "byralmrshdy41@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "chromadb>=0.4.22",
+    "datasets>=2.16.0",
+    "elasticsearch>=9.5.1",
+    "fastapi>=0.110.0",
+    "gradio>=5.9.1",
+    "langchain>=0.1.10",
+    "langchain-community>=0.0.25",
+    "langchain-core>=0.1.28",
+    "langchain-groq>=0.1.0",
+    "langchain-text-splitters>=0.0.1",
+    "markdown>=3.5.2",
+    "pandas>=2.0.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "pypdf>=4.0.0",
+    "pytest>=8.0.0",
+    "python-dotenv>=1.0.0",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=2.3.0",
+    "spaces>=0.51.3",
+    "spacy>=3.7.0",
+    "streamlit>=1.31.1",
+    "tqdm>=4.66.0",
+    "uvicorn[standard]>=0.27.1",
+]
+
+[project.scripts]
+fincon-rag = "fincon_rag:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
